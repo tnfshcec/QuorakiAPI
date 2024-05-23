@@ -18,7 +18,7 @@
 <h3 align="center">QuorakiAPI</h3>
 
   <p align="center">
-    QuorakiAPI 代表 "Quote ランキング"（語錄評比）。一個跨世代方便大家語錄評比的API。  
+    QuorakiAPI 代表 "Quote ランキング"（語錄評比）。一個跨世代方便大家語錄評比的API。\n
     <a href="https://github.com/tnfshcec/QuorakiAPI">API網址</a>
     ·
     <a href="https://github.com/tnfshcec/QuorakiAPI/issues/new">錯誤回報</a>
