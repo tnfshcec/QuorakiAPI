@@ -9,7 +9,9 @@ const app = new Elysia()
     })
     // 處理404錯誤
    .onError(({ code }) => {
-        if (code === 'NOT_FOUND') return '😆狗屁不通不知道哪個sb想到的路徑😆';
+        if (code === 'NOT_FOUND') {
+           return { error: '😆狗屁不通不知道哪個sb想到的路徑😆' };
+        }
     })
     .listen(3000);
 
