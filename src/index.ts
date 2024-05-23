@@ -7,7 +7,7 @@ const app = new Elysia()
     .get("/api/rank", ({ query }) => rank(query), {
         query: RankArgs,
     })
-    // 處理404錯誤
+    // Process 404 error
    .onError(({ code }) => {
         if (code === 'NOT_FOUND') {
            return { error: '😆狗屁不通不知道哪個sb想到的路徑😆' };
@@ -16,5 +16,5 @@ const app = new Elysia()
     .listen(3000);
 
 console.log(
-    `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`,
+    `🦊 QuorakiAPI is running at ${app.server?.hostname}:${app.server?.port}`,
 );
