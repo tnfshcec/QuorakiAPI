@@ -56,7 +56,7 @@
 <!-- ABOUT THE PROJECT -->
 ## 關於QuorakiAPI
 
-[![雞舍Logo][product-screenshot]](https://media.discordapp.net/attachments/1132971598471770172/1243243021932429342/cec-sticker.png?ex=6650c3ca&is=664f724a&hm=f43be82ae3bdc2792ec36321b2446d579de8464ff74feb3d0109a8ea70690ab7&=&format=webp&quality=lossless&width=1152&height=656)
+![雞舍Logo](https://media.discordapp.net/attachments/1132971598471770172/1243243021932429342/cec-sticker.png?ex=6650c3ca&is=664f724a&hm=f43be82ae3bdc2792ec36321b2446d579de8464ff74feb3d0109a8ea70690ab7&=&format=webp&quality=lossless&width=1152&height=656)
 
 這是一個由國立臺南第一高級中學電機社，受[黑特南一中2.0](https://www.facebook.com/hatetnfsh21)之啟發所製作的語錄評比API。  
 其中Quoraki為「Quote」（語錄）以及「ランキング」（評比）的結合體。這是一個冷笑話，但寓意深遠。
@@ -75,7 +75,6 @@
 ### 前置作業
 
 複製我們的專案到本地就好。
-* npm
   ```sh
   git clone https://github.com/tnfshcec/QuorakiAPI.git
   ```
