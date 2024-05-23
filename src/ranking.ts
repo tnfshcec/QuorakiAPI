@@ -29,16 +29,8 @@ const RANKING_TYPE_KEYS = Object.keys(RANKING_TYPES) as unknown as Array<
     keyof typeof RANKING_TYPES
 >;
 
-// INFO: This function is from TypeBox's docs,
-// to generate an OpenAPI enum with a string array.
-const StringEnum = <T extends string[]>(values: [...T]) =>
-    t.Unsafe<T[number]>({
-        type: "string",
-        enum: values,
-    });
-
 export const RankArgs = t.Object({
-    type: t.Optional(StringEnum(RANKING_TYPE_KEYS)),
+    type: t.Optional(t.Union(RANKING_TYPE_KEYS.map((k) => t.Literal(k)))),
     text: t.String(),
 });
 export type RankArgs = Static<typeof RankArgs>;
