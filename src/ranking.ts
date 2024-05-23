@@ -35,13 +35,9 @@ export const RankArgs = t.Object({
 });
 export type RankArgs = Static<typeof RankArgs>;
 
-export function rank({ type = "quote", text }: RankArgs) {
+export function rank({ type = "quote", text }: RankArgs): object {
     let ranking = RANKING_TYPES[type];
-    return `
-${ranking.name}評比
-
-「${text}」
-
-${ranking.options.join("\n")}
-`.trim();
+    return {
+        text: `${ranking.name}評比\n\n「${text}」\n\n${ranking.options.join("\n")}`
+    };
 }
