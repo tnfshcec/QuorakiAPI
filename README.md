@@ -45,7 +45,7 @@
     </li>
     <li><a href="#未來計劃">未來計劃</a></li>
     <li><a href="#協力開發">協力開發</a></li>
-    <li><a href="#憑證">憑證</a></li>
+    <li><a href="#授權">授權</a></li>
     <li><a href="#聯絡我們">聯絡我們</a></li>
     <li><a href="#特別感謝">特別感謝</a></li>
   </ol>
@@ -140,9 +140,9 @@
 
 
 <!-- LICENSE -->
-## 憑證
+## 授權
 
-我們使用 MIT License. 查看 `LICENSE.txt` 獲得更多資訊。
+我們使用 MIT License. 查看 `LICENSE` 獲得更多資訊。
 
 <p align="right">(<a href="#readme-top">回到頂部</a>)</p>
 
@@ -151,7 +151,7 @@
 <!-- CONTACT -->
 ## 聯絡我們
 
-臺南一中電機社 - [@twitter_handle](https://x.com/tnfshcec) - tnfshcec@gm.tnfsh.tn.edu.tw
+臺南一中電機社 - [@tnfshcec](https://x.com/tnfshcec) - [臺南一中電機社](https://www.facebook.com/TNFSHCEC) - tnfshcec@gm.tnfsh.tn.edu.tw
 
 專案連結： [https://github.com/tnfshcec/QuorakiAPI](https://github.com/tnfshcec/QuorakiAPI)
 
@@ -179,5 +179,4 @@
 [issues-shield]: https://img.shields.io/github/issues/tnfshcec/QuorakiAPI.svg?style=for-the-badge
 [issues-url]: https://github.com/tnfshcec/QuorakiAPI/issues
 [license-shield]: https://img.shields.io/github/license/tnfshcec/QuorakiAPI.svg?style=for-the-badge
-[license-url]: https://github.com/tnfshcec/QuorakiAPI/blob/master/LICENSE.txt
-[product-screenshot]: images/screenshot.png
+[license-url]: https://github.com/tnfshcec/QuorakiAPI/blob/master/LICENSE
