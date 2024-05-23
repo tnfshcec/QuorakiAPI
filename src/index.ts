@@ -1,8 +1,11 @@
 import { Elysia } from "elysia";
 import { swagger } from "@elysiajs/swagger";
+import { html } from "@elysiajs/html";
 import { rank, RankArgs } from "./ranking";
+import { frontendPage } from "./frontend";
 
 const app = new Elysia()
+    .use(html())
     .use(
         swagger({
             documentation: {
@@ -19,6 +22,7 @@ const app = new Elysia()
             },
         }),
     )
+    .get("/", () => frontendPage())
     .get("/api/rank", ({ query }) => rank(query), {
         query: RankArgs,
     })
