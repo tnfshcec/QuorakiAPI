@@ -1,10 +1,11 @@
 import { Elysia } from "elysia";
-import { rank, RankArgsType } from "./ranking";
+import { swagger } from "@elysiajs/swagger";
+import { rank, RankArgs } from "./ranking";
 
 const app = new Elysia()
-    .get("/", () => "Hello Elysia")
+    .use(swagger())
     .get("/api/rank", ({ query }) => rank(query), {
-        query: RankArgsType,
+        query: RankArgs,
     })
     .listen(3000);
 

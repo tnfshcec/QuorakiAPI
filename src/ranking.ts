@@ -23,16 +23,25 @@ export const RANKING_TYPES = {
     },
 };
 
+// INFO: `Object.keys()` doesn't return the keys as type for reasons,
+// but it should be safe here so we're overridding the type
 const RANKING_TYPE_KEYS = Object.keys(RANKING_TYPES) as unknown as Array<
     keyof typeof RANKING_TYPES
 >;
 
-export const RankArgsType = t.Object({
-    type: t.Optional(t.Union(RANKING_TYPE_KEYS.map((type) => t.Literal(type)))),
+// INFO: This function is from TypeBox's docs,
+// to generate an OpenAPI enum with a string array.
+const StringEnum = <T extends string[]>(values: [...T]) =>
+    t.Unsafe<T[number]>({
+        type: "string",
+        enum: values,
+    });
+
+export const RankArgs = t.Object({
+    type: t.Optional(StringEnum(RANKING_TYPE_KEYS)),
     text: t.String(),
 });
-
-export type RankArgs = Static<typeof RankArgsType>;
+export type RankArgs = Static<typeof RankArgs>;
 
 export function rank({ type = "quote", text }: RankArgs) {
     let ranking = RANKING_TYPES[type];
