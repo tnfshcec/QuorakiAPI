@@ -7,6 +7,10 @@ const app = new Elysia()
     .get("/api/rank", ({ query }) => rank(query), {
         query: RankArgs,
     })
+    // 處理404錯誤
+   .onError(({ code }) => {
+        if (code === 'NOT_FOUND') return '😆狗屁不通不知道哪個sb想到的路徑😆';
+    })
     .listen(3000);
 
 console.log(
