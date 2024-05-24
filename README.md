@@ -19,7 +19,7 @@
 
   <p align="center">
     QuorakiAPI 代表 "Quote ランキング"（語錄評比）。一個跨世代方便大家語錄評比的API。<br>
-    <a href="https://github.com/tnfshcec/QuorakiAPI">API網址</a>
+    <a href="https://quoraki.heyloon.me/swagger">API網址</a>
     ·
     <a href="https://github.com/tnfshcec/QuorakiAPI/issues/new">錯誤回報</a>
     · 
@@ -67,9 +67,9 @@
 <!-- GETTING STARTED -->
 ## 開始使用
 
-在開始使用之前，請先確認自己有一顆熱愛評比的心，阿彌陀佛。  
-如果你是要直接調API，請用：
-`` `` 
+在開始使用之前，請先確認自己有一顆熱愛評比的心，阿彌陀佛。<br>
+如果你是想要直接調API，可以到[這裡](https://quoraki.heyloon.me/swagger)自訂自己的網址，或是以以下範例直接調用。<br>
+``https://quoraki.heyloon.me/api/rank?text={要評比的文字}&type={評比類型}``<br>
 如果要自己架記得要有Git。
 
 ### 前置作業
