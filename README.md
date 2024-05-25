@@ -18,8 +18,9 @@
 <h3 align="center">QuorakiAPI</h3>
 
   <p align="center">
-    QuorakiAPI 代表 "Quote ランキング"（語錄評比）。一個跨世代方便大家語錄評比的API。<br>
-    <a href="https://quoraki.heyloon.me/swagger">API網址</a>
+    「クォートランキング」<br>
+    跨世代方便大家語錄評比的API。<br>
+    <a href="https://quoraki.heyloon.me/swagger">公用API</a>
     ·
     <a href="https://github.com/tnfshcec/QuorakiAPI/issues/new">錯誤回報</a>
     · 
@@ -39,8 +40,15 @@
     <li>
       <a href="#開始使用">開始使用</a>
       <ul>
+        <li><a href="#使用方法">使用方法</a></li>
+        <li><a href="#自行架設">自行架設</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#進行開發">進行開發</a>
+      <ul>
         <li><a href="#前置作業">前置作業</a></li>
-        <li><a href="#使用">使用</a></li>
+        <li><a href="#啟動開發伺服器">啟動開發伺服器</a></li>
       </ul>
     </li>
     <li><a href="#未來計劃">未來計劃</a></li>
@@ -59,7 +67,7 @@
 ![雞舍Logo](https://media.discordapp.net/attachments/1132971598471770172/1243243021932429342/cec-sticker.png?ex=6650c3ca&is=664f724a&hm=f43be82ae3bdc2792ec36321b2446d579de8464ff74feb3d0109a8ea70690ab7&=&format=webp&quality=lossless&width=1152&height=656)
 
 這是一個由國立臺南第一高級中學電機社，受[黑特南一中2.0](https://www.facebook.com/hatetnfsh21)之啟發所製作的語錄評比API。  
-其中Quoraki為「Quote」（語錄）以及「ランキング」（評比）的結合體。這是一個冷笑話，但寓意深遠。
+其中Quoraki為「クォート」（語錄）以及「ランキング」（評比）的結合體。這是一個冷笑話，但寓意深遠。
 
 <p align="right">(<a href="#readme-top">回到頂部</a>)</p>
 
@@ -67,45 +75,54 @@
 <!-- GETTING STARTED -->
 ## 開始使用
 
-在開始使用之前，請先確認自己有一顆熱愛評比的心，阿彌陀佛。<br>
-如果你是想要直接調API，可以到[這裡](https://quoraki.heyloon.me/swagger)自訂自己的網址，或是以以下範例直接調用。<br>
-``https://quoraki.heyloon.me/api/rank?text={要評比的文字}&type={評比類型}``<br>
-如果要自己架記得要有Git。
+在開始使用之前，請先確認自己有一顆熱愛評比的心，阿彌陀佛。
+
+如果你是想要直接調API，可以使用我們的[公用API](https://quoraki.heyloon.me/swagger)，或是架設自己的伺服器。
+
+### 使用方法
+
+非常簡單，只要發送GET請求到`/api/rank`就好了。以下示範：
+
+`http://<origin>/api/rank?text=評比南一中&type=quote`
+
+參數說明：
+
+- `text`: 必要。評比的文字。
+- `type`: 非必要。評比的類型。預設是 `quote`，即「語錄評比」。
+
+詳細的說明請洽[`/swagger`](https://quoraki.heyloon.me/swagger)頁面，在那邊你也可以找到所有可用的評比類型。
+
+### 自行架設
+
+1. 確認已經安裝了Docker。
+2. 啟動我們的Docker Image。
+
+   ```sh
+   docker run -p 3000:3000 ghcr.io/tnfshcec/quorakiapi:main
+   ```
+
+## 進行開發
 
 ### 前置作業
 
-複製我們的專案到本地就好。
-  ```sh
-  git clone https://github.com/tnfshcec/QuorakiAPI.git
-  ```
+1. 複製我們的專案到本地。
 
-### 使用
-
-以下兩項請先選好自己要用途的:D
-
-#### 架設API伺服器
-
-1. 構建 Docker 容器
    ```sh
-   cd QuorakiAPI
-   docker build -t quorakiapi .
+   git clone https://github.com/tnfshcec/QuorakiAPI.git
    ```
-2. 開啟 Docker 容器
-   ```sh
-   docker run -p 3000:3000 quorakiapi
-   ```
-3. 進入`http://localhost:3000`
-  
-#### 開發
-1. 安裝 [Bun](https://github.com/oven-sh/bun)
-2. 安裝依賴項目
+2. 確認安裝 [Bun](https://bun.sh)。
+3. 安裝依賴項目
+
    ```sh
    bun install
    ```
-3. 開啟開發伺服器
-   ```sh
-   bun run dev
-   ```
+### 啟動開發伺服器
+
+```sh
+bun run dev
+```
+
+開發伺服器即會在 [localhost:3000](http://localhost:3000) 啟動。
 
 <p align="right">(<a href="#readme-top">回到頂部</a>)</p>
 
@@ -114,9 +131,10 @@
 ## 未來計劃
 
 - [ ] 加上更多語錄評比
+- [ ] Web UI
 - [x] 跑路
 
-也可以看看[open issues](https://github.com/tnfshcec/QuorakiAPI/issues) 看看有沒有誰發了新的想法。
+也可以看看 [open issues](https://github.com/tnfshcec/QuorakiAPI/issues) 看看有沒有誰發了新的想法。
 
 <p align="right">(<a href="#readme-top">回到頂部</a>)</p>
 
