@@ -1,4 +1,5 @@
 import { t, type Static } from "elysia";
+import { StringEnum } from "./StringEnum";
 
 export const RANKING_TYPES = {
     quote: {
@@ -90,7 +91,7 @@ const RANKING_TYPE_KEYS = Object.keys(RANKING_TYPES) as unknown as Array<
 >;
 
 export const RankArgs = t.Object({
-    type: t.Optional(t.Union(RANKING_TYPE_KEYS.map((k) => t.Literal(k)))),
+    type: t.Optional(StringEnum(RANKING_TYPE_KEYS)),
     text: t.String(),
 });
 export type RankArgs = Static<typeof RankArgs>;
