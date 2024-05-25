@@ -1,11 +1,11 @@
 import { Kind, SchemaOptions, TSchema, TypeRegistry } from "@sinclair/typebox";
 
-TypeRegistry.Set<StringEnum>(
+TypeRegistry.Set<TStringEnum>(
     "StringEnum",
     (schema, value) => typeof value === "string" && schema.enum.includes(value),
 );
 
-export interface StringEnum<T extends string[] = string[]> extends TSchema {
+export interface TStringEnum<T extends string[] = string[]> extends TSchema {
     [Kind]: "StringEnum";
     static: T[number];
     enum: T;
@@ -15,7 +15,7 @@ export interface StringEnum<T extends string[] = string[]> extends TSchema {
 export function StringEnum<T extends string[]>(
     values: [...T],
     options?: SchemaOptions,
-): StringEnum<T> {
+): TStringEnum<T> {
     return {
         ...options,
         [Kind]: "StringEnum",
