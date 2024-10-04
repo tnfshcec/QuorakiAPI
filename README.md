@@ -12,7 +12,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/tnfshcec/QuorakiAPI">
-    <img src="https://media.discordapp.net/attachments/1132971598471770172/1243250967189651530/Group_51.png?ex=6650cb31&is=664f79b1&hm=df4cc947370abef19d42c0bd593de6c4019fbd83d900978fc90880a9921d3306&=&format=webp&quality=lossless" alt="Logo" width="80" height="80">
+    <img src="https://raw.githubusercontent.com/tnfshcec/logo/refs/heads/main/logo.svg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">QuorakiAPI</h3>
@@ -20,8 +20,8 @@
   <p align="center">
     「クォートランキング」<br>
     跨世代方便大家語錄評比的API。<br>
-    <a href="https://quoraki.heyloon.me/swagger">公用API</a>
-    ·
+    <!--<a href="https://quoraki.heyloon.me/swagger">公用API</a>
+    ·-->
     <a href="https://github.com/tnfshcec/QuorakiAPI/issues/new">錯誤回報</a>
     · 
     <a href="https://github.com/tnfshcec/QuorakiAPI/issues/new">功能請求</a>
@@ -64,7 +64,7 @@
 <!-- ABOUT THE PROJECT -->
 ## 關於QuorakiAPI
 
-![雞舍Logo](https://media.discordapp.net/attachments/1132971598471770172/1243243021932429342/cec-sticker.png?ex=6650c3ca&is=664f724a&hm=f43be82ae3bdc2792ec36321b2446d579de8464ff74feb3d0109a8ea70690ab7&=&format=webp&quality=lossless&width=1152&height=656)
+![雞舍Logo](https://raw.githubusercontent.com/tnfshcec/logo/refs/heads/main/stickers/cec-sticker.png)
 
 這是一個由國立臺南第一高級中學電機社，受[黑特南一中2.0](https://www.facebook.com/hatetnfsh21)之啟發所製作的語錄評比API。  
 其中Quoraki為「クォート」（語錄）以及「ランキング」（評比）的結合體。這是一個冷笑話，但寓意深遠。
@@ -77,7 +77,9 @@
 
 在開始使用之前，請先確認自己有一顆熱愛評比的心，阿彌陀佛。
 
+<!--
 如果你是想要直接調API，可以使用我們的[公用API](https://quoraki.heyloon.me/swagger)，或是架設自己的伺服器。
+-->
 
 ### 使用方法
 
@@ -90,12 +92,12 @@
 - `text`: 必要。評比的文字。
 - `type`: 非必要。評比的類型。預設是 `quote`，即「語錄評比」。
 
-詳細的說明請洽[`/swagger`](https://quoraki.heyloon.me/swagger)頁面，在那邊你也可以找到所有可用的評比類型。
+詳細的說明請洽 `/swagger` 頁面，在那邊你也可以找到所有可用的評比類型。
 
 ### 自行架設
 
-1. 確認已經安裝了Docker。
-2. 啟動我們的Docker Image。
+1. 確認已經安裝了 Docker。
+2. 啟動我們的 Docker Image。
 
    ```sh
    docker run -p 3000:3000 ghcr.io/tnfshcec/quorakiapi:main
@@ -185,8 +187,7 @@ bun run dev
 
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/tnfshcec/QuorakiAPI.svg?style=for-the-badge
 [contributors-url]: https://github.com/tnfshcec/QuorakiAPI/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/tnfshcec/QuorakiAPI.svg?style=for-the-badge
